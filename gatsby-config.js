@@ -4,8 +4,8 @@ module.exports = {
         author: 'Andrew Mead'
     },
     plugins: [
-        'gatsby-plugin-sass',
         `gatsby-plugin-netlify-cms`,
+        'gatsby-plugin-sass',
         {
             resolve: 'gatsby-source-filesystem',
             options: {
