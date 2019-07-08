@@ -7,7 +7,6 @@ module.exports.onCreateNode = ({ node, actions, getNode }) => {
   if (node.internal.type === 'MarkdownRemark') {
     const slug = path.basename(node.fileAbsolutePath, '.md')
     const parentNode = getNode(node.parent)
-    console.log({ parentNode });
     const type = path.parse(parentNode.relativePath).dir
     createNodeField({
       node,
@@ -40,7 +39,6 @@ module.exports.createPages = async ({ graphql, actions }) => {
     }
   }
   `)
-  // console.log(JSON.stringify(res, undefined, 4));
   res.data.allMarkdownRemark.edges.forEach(edge => {
     if (edge.node.fields.type === 'posts') {
       createPage({
