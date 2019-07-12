@@ -25,7 +25,7 @@ export const query = graphql`
 `
 
 const IndexComponent = ({ data }) => {
-  console.log('H');
+
   return (
     <Layout>
       <h1>
