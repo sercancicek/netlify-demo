@@ -6,6 +6,7 @@ module.exports.onCreateNode = ({ node, actions, getNode }) => {
   // create a new node field.
   if (node.internal.type === 'MarkdownRemark') {
     const slug = path.basename(node.fileAbsolutePath, '.md')
+    
     const parentNode = getNode(node.parent)
     const type = path.parse(parentNode.relativePath).dir
     createNodeField({
