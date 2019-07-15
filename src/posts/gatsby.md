@@ -1,11 +1,11 @@
 ---
-title: "The Great Gatsby"
-date: "2019-04-06"
+title: The Great Gatsby
+date: '2019-04-06'
 ---
-
 I just launched a bootcamp
 
-##Topics
+**Topics**
+
 1. xxx
 2. yyy
 3. zzz
