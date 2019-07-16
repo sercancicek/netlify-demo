@@ -26,16 +26,30 @@ export const query = graphql`
 
 const IndexComponent = ({ data }) => {
 
+  let title = '';
+  let subtitle = '';
+  let paragraph = '';
+
+  if (data.markdownRemark) {
+    title = data.markdownRemark.frontmatter.h1
+    subtitle = data.markdownRemark.frontmatter.h2
+    paragraph = data.markdownRemark.frontmatter.p
+  } else {
+    title = data.h1
+    subtitle = data.h2
+    paragraph = data.p
+  }
+
   return (
     <Layout>
       <h1>
-        {data.markdownRemark.frontmatter.h1}
+        {title}
       </h1>
       <h2>
-        {data.markdownRemark.frontmatter.h2}
+        {subtitle}
       </h2>
       <p>
-        {data.markdownRemark.frontmatter.p}
+        {paragraph}
       </p>
     </Layout>
   )
