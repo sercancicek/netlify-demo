@@ -5,6 +5,6 @@ import IndexComponent from '../templates';
 CMS.registerPreviewTemplate('home', ({ entry }) => {
   console.log({ bb: entry });
   return (
-    <IndexComponent {...entry.toJS().data} />
+    <IndexComponent {...entry.toJS()} />
   )
 })
