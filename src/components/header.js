@@ -15,18 +15,18 @@ const Header = () => {
   `)
 
   return (
-    <header className={headerStyles.header}>
+    <header className="header">
       <h1>
-        <Link className={headerStyles.title} to="/">
+        <Link className="title" to="/">
           {data.site.siteMetadata.title}
         </Link>
       </h1>
       <nav>
-        <ul className={headerStyles.navList}>
+        <ul className="nav-list">
           <li>
             <Link
-              className={headerStyles.navItem}
-              activeClassName={headerStyles.activeNavItem}
+              className="nav-item"
+              activeClassName="active-nav-item"
               to="/"
             >
               Home
